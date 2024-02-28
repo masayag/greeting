@@ -1,0 +1,18 @@
+
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: greeting
+  description: A workflow for onboarding applications to OCP cluster
+  annotations:
+    backstage.io/kubernetes-label-selector: 'app=greeting'
+    backstage.io/kubernetes-namespace: sonataflow-infra
+    janus-idp.io/tekton: greeting
+    backstage.io/kubernetes-id: greeting
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: xxxx/greeting
+spec:
+  type: workflow-project
+  system: system:default/janus-orchestrator
+  lifecycle: development
+  owner: user:guest
